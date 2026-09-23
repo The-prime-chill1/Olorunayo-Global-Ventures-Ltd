@@ -1,0 +1,127 @@
+.hse-wrapper {
+  background: linear-gradient(135deg, #091528 0%, #0f172a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(9, 21, 40, 0.2);
+}
+
+.hse-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.hse-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hse-left h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.hse-left p {
+  margin-bottom: 26px;
+  font-size: 1.02rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.hse-points-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hse-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.hse-point-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.25);
+  border: 1px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #93c5fd;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.hse-point-text {
+  font-size: 0.96rem;
+  color: #ffffff;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Right Pillars */
+.hse-pillars-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hse-pillar-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+}
+
+.hse-pillar-card:hover {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: #3b82f6;
+  transform: translateX(4px);
+}
+
+.hse-pillar-name {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.hse-pillar-tag {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 900px) {
+  .hse-wrapper {
+    padding: 32px 20px;
+  }
+  .hse-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hse-left h3 {
+    font-size: 1.75rem;
+  }
+}

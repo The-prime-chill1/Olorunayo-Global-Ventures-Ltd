@@ -1,0 +1,211 @@
+/* ==========================================================================
+   HOMELAND-INSPIRED STATS BANNER & CORPORATE FOOTER
+   ========================================================================== */
+
+/* Homeland Blue Stats Banner */
+.stats-banner-homeland {
+  background: var(--primary);
+  border-radius: var(--radius-md);
+  padding: 40px 30px;
+  margin-bottom: 70px;
+  box-shadow: 0 15px 35px rgba(19, 64, 184, 0.25);
+}
+
+.stats-banner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stats-banner-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #ffffff;
+}
+
+.stats-banner-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.stats-banner-val {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.stats-banner-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+/* Footer Styling */
+.site-footer {
+  background: #091528;
+  color: #94a3b8;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1.2fr 1.6fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-brand-col p {
+  margin-top: 16px;
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.footer-cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(19, 64, 184, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.4);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  margin-top: 18px;
+  font-size: 0.78rem;
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin-bottom: 22px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 26px;
+  height: 2px;
+  background: var(--primary-light);
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links-list a {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links-list a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.footer-contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact-row .icon-wrapper {
+  color: #60a5fa;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.footer-contact-row p, .footer-contact-row a {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.footer-contact-row a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.84rem;
+  color: #94a3b8;
+}
+
+.footer-bottom a {
+  color: #60a5fa;
+}
+
+.footer-powered-by a {
+  color: #93c5fd;
+  font-weight: 700;
+  transition: color var(--transition-fast);
+}
+
+.footer-powered-by a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+  .stats-banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .stats-banner-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

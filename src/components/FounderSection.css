@@ -1,0 +1,125 @@
+.founder-card {
+  background: linear-gradient(145deg, #131a27 0%, #0d121c 100%);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  align-items: stretch;
+}
+
+.founder-image-col {
+  position: relative;
+  min-height: 480px;
+  background: #090d14;
+}
+
+.founder-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.founder-image-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background: rgba(11, 15, 23, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--gold-border);
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.founder-details-col {
+  padding: 50px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.founder-title-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+
+.founder-name {
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.founder-designation {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.founder-quote-box {
+  background: rgba(37, 99, 235, 0.1);
+  border-left: 3px solid var(--primary);
+  padding: 18px 22px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 24px;
+  font-style: italic;
+  color: #f8fafc;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.founder-message-p p {
+  font-size: 0.98rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.founder-stats-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.founder-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-card);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 992px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+  }
+  .founder-image-col {
+    min-height: 380px;
+  }
+  .founder-details-col {
+    padding: 35px 24px;
+  }
+}
