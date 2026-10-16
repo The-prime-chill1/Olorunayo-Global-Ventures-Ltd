@@ -25,6 +25,8 @@ export default function ContactForm() {
 
   const [submitted, setSubmitted] = useState(false);
 
+  const [whatsappLink, setWhatsappLink] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -32,9 +34,8 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-
-    // Also compose WhatsApp message for fast immediate contractor response
+    
+    // Compose WhatsApp message for fast contractor response
     const whatsappMessage = encodeURIComponent(
       `Hello Olorunayo Global Ventures Ltd,\n\n` +
       `I would like to request a quotation/consultation:\n` +
@@ -46,10 +47,12 @@ export default function ContactForm() {
       `Message: ${formData.message}`
     );
 
-    // Smooth open whatsapp after 1 second or let user click directly
-    setTimeout(() => {
-      window.open(`https://wa.me/${companyInfo.rawWhatsapp || '2348024271467'}?text=${whatsappMessage}`, '_blank');
-    }, 800);
+    const waUrl = `https://wa.me/${companyInfo.rawWhatsapp || '2348024271467'}?text=${whatsappMessage}`;
+    setWhatsappLink(waUrl);
+    setSubmitted(true);
+
+    // Open WhatsApp directly
+    window.open(waUrl, '_blank');
   };
 
   return (
@@ -137,9 +140,23 @@ export default function ContactForm() {
           </p>
 
           {submitted && (
-            <div className="form-feedback-alert">
-              <CheckCircle2 size={20} />
-              <span>Thank you! Your project inquiry has been received. Redirecting to WhatsApp for instant engineer dispatch...</span>
+            <div className="form-feedback-alert" style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-start' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <CheckCircle2 size={20} />
+                <span>Thank you! Your project inquiry has been received.</span>
+              </div>
+              {whatsappLink && (
+                <a 
+                  href={whatsappLink} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="btn-primary" 
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '8px 16px', fontSize: '0.9rem', textDecoration: 'none' }}
+                >
+                  <MessageSquare size={16} />
+                  <span>Open Inquiry in WhatsApp</span>
+                </a>
+              )}
             </div>
           )}
 
@@ -255,8 +272,23 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Google Maps Embed Placeholder */}
+      {/* Google Maps Embed with Ad-block Resilient Overlay */}
       <div className="map-container">
+        <div className="map-info-floating-card">
+          <div className="map-info-text">
+            <strong>Headquarters &amp; Site Depot</strong>
+            <span>{companyInfo.location.address}</span>
+          </div>
+          <a 
+            href="https://maps.google.com/?q=Orchid+Rd+Lekki+Lagos" 
+            target="_blank" 
+            rel="noreferrer"
+            className="map-direct-link-btn"
+          >
+            <span>Open in Google Maps</span>
+            <ExternalLink size={14} />
+          </a>
+        </div>
         <iframe 
           title="Olorunayo Global Ventures Office Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15858.918995393526!2d3.5432!3d6.4419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf705c747cfc1%3A0x868b44910cf2e21b!2sOrchid%20Rd%2C%20Lekki%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" 

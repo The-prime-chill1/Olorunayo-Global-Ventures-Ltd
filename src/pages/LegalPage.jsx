@@ -1,13 +1,13 @@
 import React from 'react';
-import { ShieldCheck, Lock, FileText, CheckCircle2, Mail, Phone, MapPin } from 'lucide-react';
+import { ShieldCheck, Lock, Mail, Phone, MapPin } from 'lucide-react';
 import { companyInfo } from '../data/company';
-import './PrivacyPolicy.css';
+import './LegalPage.css';
 
-export default function PrivacyPolicy() {
+export default function LegalPage() {
   const lastUpdated = "September 2024";
 
   return (
-    <div className="privacy-page" style={{ paddingTop: 'calc(var(--header-height) + 20px)' }}>
+    <div className="legal-page" style={{ paddingTop: 'calc(var(--header-height) + 20px)' }}>
       {/* Header Hero */}
       <section className="section-padding-sm bg-mesh" style={{ borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
             <span>NIGERIA DATA PROTECTION ACT (NDPA) COMPLIANT</span>
           </div>
           <h1 className="section-title" style={{ fontSize: 'clamp(2.5rem, 4.5vw, 3.8rem)' }}>
-            Privacy Policy
+            Privacy Policy &amp; Terms
           </h1>
           <p style={{ maxWidth: '780px', margin: '0 auto', fontSize: '1.1rem', color: '#475569' }}>
             How <strong>{companyInfo.name}</strong> collects, protects, processes, and respects your 
@@ -31,9 +31,9 @@ export default function PrivacyPolicy() {
       {/* Main Content Article */}
       <section className="section-padding bg-mesh-secondary">
         <div className="container">
-          <div className="privacy-content-card">
-            <div className="privacy-intro-box">
-              <div className="privacy-intro-icon">
+          <div className="legal-content-card">
+            <div className="legal-intro-box">
+              <div className="legal-intro-icon">
                 <Lock size={28} />
               </div>
               <div>
@@ -41,12 +41,12 @@ export default function PrivacyPolicy() {
                 <p>
                   At <strong>{companyInfo.name}</strong>, we respect the confidentiality of your personal 
                   identifiable information (PII) and the proprietary nature of your architectural plans, site coordinates, 
-                  and commercial construction budgets. This Privacy Policy details our transparent data handling principles.
+                  and commercial construction budgets. This policy details our transparent data handling principles.
                 </p>
               </div>
             </div>
 
-            <div className="privacy-body-text">
+            <div className="legal-body-text">
               <h2>1. Scope &amp; Legal Framework</h2>
               <p>
                 This Policy applies to all interactions with our digital web platform, WhatsApp inquiry channels, 
@@ -106,7 +106,7 @@ export default function PrivacyPolicy() {
 
               <h2>8. Updates to this Policy</h2>
               <p>
-                We may periodically update this Privacy Policy to reflect changing regulatory mandates, new digital services, 
+                We may periodically update this policy to reflect changing regulatory mandates, new digital services, 
                 or modified construction practices. Any revisions will be published on this page with an updated effective date.
               </p>
 
@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
                 If you have questions, inquiries, or wish to exercise your data rights, please contact our administrative team:
               </p>
 
-              <div className="privacy-contact-card">
+              <div className="legal-contact-card">
                 <div className="contact-row">
                   <MapPin size={18} color="var(--primary)" />
                   <span><strong>Corporate Depot:</strong> {companyInfo.location.address}</span>

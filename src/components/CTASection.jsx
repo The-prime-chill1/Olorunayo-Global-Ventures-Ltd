@@ -1,49 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, PhoneCall, Sparkles } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import './CTASection.css';
 
 export default function CTASection({ onOpenEstimator }) {
   return (
-    <section className="section-padding" style={{ paddingTop: '60px' }}>
-      <div className="container">
-        <div className="cta-banner">
-          <div className="cta-mesh-bg"></div>
-          <div className="cta-content">
-            <div className="badge-gold" style={{ marginBottom: '20px' }}>
-              <Sparkles size={14} />
-              <span>PARTNER WITH INDUSTRY LEADERS</span>
-            </div>
+    <section className="mm-bottom-cta-section" aria-label="Call to Action">
+      <div className="mm-bottom-cta-bg">
+        <img 
+          src="/images/building_twilight.jpg" 
+          alt="Planning a Construction Project" 
+          className="mm-bottom-cta-img"
+        />
+        <div className="mm-bottom-cta-overlay"></div>
+      </div>
 
-            <h2 className="cta-headline">
-              LET'S BUILD SOMETHING <span>LASTING.</span>
-            </h2>
+      <div className="container mm-bottom-cta-container">
+        <h2 className="mm-bottom-cta-title">
+          Planning a Construction Project?
+        </h2>
+        
+        <p className="mm-bottom-cta-subtitle">
+          Let Olorunayo Global Ventures Ltd bring your vision to life.
+        </p>
 
-            <p className="cta-text">
-              Whether you are planning a private luxury duplex, a commercial retail plaza, 
-              industrial warehouse trusses, or need bulk supplies of certified concrete blocks and 
-              interlocking stones, our team is ready to execute with world-class precision.
-            </p>
-
-            <div className="cta-actions">
-              <Link to="/contact" className="btn-primary">
-                <span>START YOUR PROJECT</span>
-                <ArrowRight size={18} />
-              </Link>
-
-              {onOpenEstimator && (
-                <button 
-                  type="button" 
-                  className="btn-secondary"
-                  onClick={onOpenEstimator}
-                >
-                  <PhoneCall size={18} />
-                  <span>CALCULATE ESTIMATE</span>
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
+        <button 
+          type="button" 
+          className="mm-btn-cta-gold"
+          onClick={onOpenEstimator}
+        >
+          <span>Request a Free Quote</span>
+          <ChevronRight size={17} />
+        </button>
       </div>
     </section>
   );

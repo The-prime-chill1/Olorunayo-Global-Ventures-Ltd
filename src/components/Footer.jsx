@@ -69,8 +69,14 @@ export default function Footer() {
         <div className="footer-top-grid">
           {/* Brand Info */}
           <div className="footer-brand-col">
-            <div className="brand-name" style={{ fontSize: '1.25rem', color: '#ffffff' }}>
-              OLORUNAYO <span style={{ color: '#60a5fa' }}>GLOBAL</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
+              <div style={{ width: '52px', height: '52px', borderRadius: '10px', overflow: 'hidden', background: '#ffffff', flexShrink: 0, boxShadow: '0 4px 12px rgba(0,0,0,0.3)', border: '1.5px solid rgba(245, 158, 11, 0.4)' }}>
+                <img src="/images/logo.jpeg" alt="Olorunayo Global Ventures Ltd Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+              <div className="brand-name" style={{ fontSize: '1.2rem', color: '#ffffff', lineHeight: 1.2 }}>
+                OLORUNAYO <span style={{ color: '#f59e0b' }}>GLOBAL</span>
+                <div style={{ fontSize: '0.72rem', color: '#94a3b8', letterSpacing: '0.08em', marginTop: '2px' }}>VENTURES LTD.</div>
+              </div>
             </div>
             <p>
               An established Nigerian engineering and building enterprise providing integrated construction, 

@@ -203,6 +203,59 @@
   height: 380px;
   position: relative;
   box-shadow: var(--shadow-sm);
+  background: #f1f5f9;
+}
+
+.map-info-floating-card {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  padding: 12px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-card);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.map-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-info-text strong {
+  font-size: 0.92rem;
+  color: #0f172a;
+}
+
+.map-info-text span {
+  font-size: 0.82rem;
+  color: #475569;
+}
+
+.map-direct-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: #ffffff !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.map-direct-link-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
 }
 
 .map-container iframe {

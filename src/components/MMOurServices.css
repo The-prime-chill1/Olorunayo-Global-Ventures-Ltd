@@ -1,0 +1,112 @@
+/* ==========================================================================
+   MM BUILDERS - OUR SERVICES SECTION (DARK GLASSMORPHISM)
+   ========================================================================== */
+
+.mm-services-section {
+  background: #0d1527;
+  padding: 60px 0 80px;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mm-services-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 32px;
+  letter-spacing: -0.01em;
+}
+
+.mm-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* In the reference image: 4 cards in first row, 2 cards in second row */
+@media (min-width: 1024px) {
+  .mm-services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.mm-service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 22px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+}
+
+.mm-service-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(245, 158, 11, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.mm-service-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.mm-service-card:hover .mm-service-icon-wrap {
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+.mm-service-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.mm-service-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.mm-service-desc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  .mm-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mm-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .mm-services-section {
+    padding: 40px 0 60px;
+  }
+}
+
+@media (max-width: 520px) {
+  .mm-services-grid {
+    grid-template-columns: 1fr;
+  }
+}

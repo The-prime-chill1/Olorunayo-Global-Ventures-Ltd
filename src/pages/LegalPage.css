@@ -1,8 +1,8 @@
 /* ==========================================================================
-   PRIVACY POLICY PAGE STYLES - HOMELAND CLEAN THEME
+   LEGAL / POLICY PAGE STYLES - HOMELAND CLEAN THEME
    ========================================================================== */
 
-.privacy-content-card {
+.legal-content-card {
   max-width: 920px;
   margin: 0 auto;
   background: #ffffff;
@@ -12,7 +12,7 @@
   box-shadow: var(--shadow-sm);
 }
 
-.privacy-intro-box {
+.legal-intro-box {
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -23,7 +23,7 @@
   margin-bottom: 36px;
 }
 
-.privacy-intro-icon {
+.legal-intro-icon {
   width: 50px;
   height: 50px;
   border-radius: var(--radius-sm);
@@ -35,21 +35,21 @@
   flex-shrink: 0;
 }
 
-.privacy-intro-box h3 {
+.legal-intro-box h3 {
   font-size: 1.25rem;
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 8px;
 }
 
-.privacy-intro-box p {
+.legal-intro-box p {
   font-size: 0.94rem;
   color: #334155;
   line-height: 1.65;
   margin: 0;
 }
 
-.privacy-body-text h2 {
+.legal-body-text h2 {
   font-size: 1.35rem;
   font-weight: 700;
   color: #0f172a;
@@ -59,14 +59,14 @@
   border-bottom: 1px solid #f1f5f9;
 }
 
-.privacy-body-text p {
+.legal-body-text p {
   font-size: 0.98rem;
   color: #475569;
   line-height: 1.75;
   margin-bottom: 16px;
 }
 
-.privacy-body-text ul {
+.legal-body-text ul {
   margin-bottom: 24px;
   padding-left: 20px;
   display: flex;
@@ -74,17 +74,17 @@
   gap: 10px;
 }
 
-.privacy-body-text li {
+.legal-body-text li {
   font-size: 0.96rem;
   color: #475569;
   line-height: 1.65;
 }
 
-.privacy-body-text strong {
+.legal-body-text strong {
   color: #0f172a;
 }
 
-.privacy-contact-card {
+.legal-contact-card {
   margin-top: 24px;
   background: #f8fafc;
   border: 1px solid var(--border-card);
@@ -95,7 +95,7 @@
   gap: 14px;
 }
 
-.privacy-contact-card .contact-row {
+.legal-contact-card .contact-row {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -104,15 +104,15 @@
 }
 
 @media (max-width: 768px) {
-  .privacy-content-card {
+  .legal-content-card {
     padding: 30px 20px;
   }
-  .privacy-intro-box {
+  .legal-intro-box {
     flex-direction: column;
     padding: 20px;
     gap: 14px;
   }
-  .privacy-body-text h2 {
+  .legal-body-text h2 {
     font-size: 1.2rem;
     margin-top: 28px;
   }

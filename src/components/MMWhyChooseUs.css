@@ -1,0 +1,107 @@
+/* ==========================================================================
+   MM BUILDERS - WHY CHOOSE MM BUILDERS
+   ========================================================================== */
+
+.mm-why-section {
+  background: #f1f5f9;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding: 80px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mm-why-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.35rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 36px;
+  letter-spacing: -0.01em;
+}
+
+.mm-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.mm-why-image-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  height: 380px;
+}
+
+.mm-why-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Right Feature Grid */
+.mm-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.mm-feature-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s ease;
+}
+
+.mm-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Fifth card occupies full row or aligns neatly */
+.mm-feature-card:last-child {
+  grid-column: span 1;
+}
+
+.mm-feature-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mm-feature-text {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .mm-why-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .mm-why-image-card {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mm-features-grid {
+    grid-template-columns: 1fr;
+  }
+}

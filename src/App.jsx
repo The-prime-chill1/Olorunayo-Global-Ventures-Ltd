@@ -10,7 +10,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import IndustriesPage from './pages/IndustriesPage';
 import ContactPage from './pages/ContactPage';
 import FAQPage from './pages/FAQPage';
-import PrivacyPolicy from './pages/PrivacyPolicy';
+import LegalPage from './pages/LegalPage';
 
 // Auto scroll to top on page navigation
 function ScrollToTop() {
@@ -52,8 +52,9 @@ export default function App() {
             <Route path="/projects" element={<ProjectsPage onOpenEstimator={handleOpenEstimator} />} />
             <Route path="/industries" element={<IndustriesPage onOpenEstimator={handleOpenEstimator} />} />
             <Route path="/faq" element={<FAQPage onOpenEstimator={handleOpenEstimator} />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/privacy" element={<LegalPage />} />
+            <Route path="/privacy-policy" element={<LegalPage />} />
+            <Route path="/legal" element={<LegalPage />} />
             <Route path="/contact" element={<ContactPage onOpenEstimator={handleOpenEstimator} />} />
             <Route path="*" element={<Home onOpenEstimator={handleOpenEstimator} />} />
           </Routes>
